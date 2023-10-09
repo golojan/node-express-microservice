@@ -1,0 +1,25 @@
+[INFO] - 09/10/2023, 04:25:44,473 - MicroService :: MicroService is starting with environment :: dev
+[INFO] - 09/10/2023, 04:25:44,498 - MicroService :: Initialising express MicroService with tyboost
+[INFO] - 09/10/2023, 04:25:44,500 - MicroService :: Initiating MicroService
+[INFO] - 09/10/2023, 04:25:44,501 - BOOT :: Registering core middleware started
+[INFO] - 09/10/2023, 04:25:44,504 - BOOT :: Registered middleware : bodyParser
+[INFO] - 09/10/2023, 04:25:44,505 - BOOT :: Registered middleware : cors(*)
+[INFO] - 09/10/2023, 04:25:44,509 - BOOT :: Registered middleware : helmet
+[INFO] - 09/10/2023, 04:25:44,510 - BOOT :: Registering core middleware done
+[INFO] - 09/10/2023, 04:25:44,511 - BOOT :: Registering Applications And Services started
+[INFO] - 09/10/2023, 04:25:44,514 - BOOT :: Registering applications & services done
+[INFO] - 09/10/2023, 04:25:44,516 - BOOT :: Registering routes started
+[INFO] - 09/10/2023, 04:25:44,518 - BOOT :: Registered following routes
+[INFO] - 09/10/2023, 04:25:44,522 - 
+[90m┌────────┬──────────┐[39m
+[90m│[39m[31m Method [39m[90m│[39m[31m Endpoint [39m[90m│[39m
+[90m├────────┼──────────┤[39m
+[90m│[39m[31m GET    [39m[90m│[39m /api/v1/ [90m│[39m
+[90m└────────┴──────────┘[39m
+[INFO] - 09/10/2023, 04:25:44,524 - BOOT :: Registering routes done
+[INFO] - 09/10/2023, 04:25:44,525 - BOOT :: Registering initializer started
+[INFO] - 09/10/2023, 04:25:44,526 - BOOT :: Registered initializer : data
+[INFO] - 09/10/2023, 04:25:44,528 - BOOT :: Registering initializer done
+[INFO] - 09/10/2023, 04:25:44,530 - BOOT :: Booting application started
+[INFO] - 09/10/2023, 04:25:44,533 - BOOT :: Booting application done
+[INFO] - 09/10/2023, 04:25:44,602 - BOOT :: Listening on localhost:8080

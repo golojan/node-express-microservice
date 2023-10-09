@@ -1,0 +1,46 @@
+[INFO] - 09/10/2023, 04:26:18,386 - MicroService :: MicroService is starting with environment :: dev
+[INFO] - 09/10/2023, 04:26:18,420 - MicroService :: Initialising express MicroService with tyboost
+[INFO] - 09/10/2023, 04:26:18,423 - MicroService :: Initiating MicroService
+[INFO] - 09/10/2023, 04:26:18,425 - BOOT :: Registering core middleware started
+[INFO] - 09/10/2023, 04:26:18,433 - BOOT :: Registered middleware : bodyParser
+[INFO] - 09/10/2023, 04:26:18,435 - BOOT :: Registered middleware : cors(*)
+[INFO] - 09/10/2023, 04:26:18,439 - BOOT :: Registered middleware : helmet
+[INFO] - 09/10/2023, 04:26:18,440 - BOOT :: Registering core middleware done
+[INFO] - 09/10/2023, 04:26:18,443 - BOOT :: Registering Applications And Services started
+[INFO] - 09/10/2023, 04:26:18,445 - BOOT :: Registering applications & services done
+[INFO] - 09/10/2023, 04:26:18,448 - BOOT :: Registering routes started
+[INFO] - 09/10/2023, 04:26:18,453 - BOOT :: Registered following routes
+[INFO] - 09/10/2023, 04:26:18,467 - 
+[90m┌────────┬──────────┐[39m
+[90m│[39m[31m Method [39m[90m│[39m[31m Endpoint [39m[90m│[39m
+[90m├────────┼──────────┤[39m
+[90m│[39m[31m GET    [39m[90m│[39m /api/v1/ [90m│[39m
+[90m└────────┴──────────┘[39m
+[INFO] - 09/10/2023, 04:26:18,472 - BOOT :: Registering routes done
+[INFO] - 09/10/2023, 04:26:18,473 - BOOT :: Registering initializer started
+[INFO] - 09/10/2023, 04:26:18,480 - BOOT :: Registered initializer : data
+[INFO] - 09/10/2023, 04:26:18,482 - BOOT :: Registering initializer done
+[INFO] - 09/10/2023, 04:26:18,483 - BOOT :: Booting application started
+[ERROR] - 09/10/2023, 04:26:18,486 - BOOT :: Error while booting application from boot script : {}
+[ERROR] - 09/10/2023, 04:26:18,589 - uncaughtException: app.bootUp is not a function
+TypeError: app.bootUp is not a function
+    at MicroService.<anonymous> (E:\mserv\app\boot.ts:36:23)
+    at Generator.next (<anonymous>)
+    at E:\mserv\app\boot.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\mserv\app\boot.ts:4:12)
+    at MicroService.bootUp (E:\mserv\app\boot.ts:25:47)
+    at Object.<anonymous> (E:\mserv\server.ts:3:14)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10) TypeError: app.bootUp is not a function TypeError: app.bootUp is not a function
+    at MicroService.<anonymous> (E:\mserv\app\boot.ts:36:23)
+    at Generator.next (<anonymous>)
+    at E:\mserv\app\boot.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\mserv\app\boot.ts:4:12)
+    at MicroService.bootUp (E:\mserv\app\boot.ts:25:47)
+    at Object.<anonymous> (E:\mserv\server.ts:3:14)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)

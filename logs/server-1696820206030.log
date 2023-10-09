@@ -1,0 +1,42 @@
+[ERROR] - 09/10/2023, 03:56:46,78 - uncaughtException: ⨯ Unable to compile TypeScript:
+[96mutils/constants.ts[0m:[93m13[0m:[93m7[0m - [91merror[0m[90m TS6133: [0m'JWT_EXPIRY' is declared but its value is never read.
+
+[7m13[0m const JWT_EXPIRY =  process.env.JWT_EXPIRY || "1d";
+[7m  [0m [91m      ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96mutils/constants.ts[0m:[93m13[0m:[93m7[0m - [91merror[0m[90m TS6133: [0m'JWT_EXPIRY' is declared but its value is never read.
+
+[7m13[0m const JWT_EXPIRY =  process.env.JWT_EXPIRY || "1d";
+[7m  [0m [91m      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19) TSError: ⨯ Unable to compile TypeScript:
+[96mutils/constants.ts[0m:[93m13[0m:[93m7[0m - [91merror[0m[90m TS6133: [0m'JWT_EXPIRY' is declared but its value is never read.
+
+[7m13[0m const JWT_EXPIRY =  process.env.JWT_EXPIRY || "1d";
+[7m  [0m [91m      ~~~~~~~~~~[0m
+ TSError: ⨯ Unable to compile TypeScript:
+[96mutils/constants.ts[0m:[93m13[0m:[93m7[0m - [91merror[0m[90m TS6133: [0m'JWT_EXPIRY' is declared but its value is never read.
+
+[7m13[0m const JWT_EXPIRY =  process.env.JWT_EXPIRY || "1d";
+[7m  [0m [91m      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Stanley Agu\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)

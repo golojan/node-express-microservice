@@ -1,0 +1,24 @@
+[INFO] - 09/10/2023, 03:49:01,253 - BOOT :: App is starting with environment :: dev
+[INFO] - 09/10/2023, 03:49:01,281 - BOOT :: Initialising express app with tyboost
+[INFO] - 09/10/2023, 03:49:01,285 - BOOT :: Registering core middleware started
+[INFO] - 09/10/2023, 03:49:01,288 - BOOT :: Registered middleware : bodyParser
+[INFO] - 09/10/2023, 03:49:01,289 - BOOT :: Registered middleware : cors(*)
+[INFO] - 09/10/2023, 03:49:01,292 - BOOT :: Registered middleware : helmet
+[INFO] - 09/10/2023, 03:49:01,293 - BOOT :: Registering core middleware done
+[INFO] - 09/10/2023, 03:49:01,294 - BOOT :: Registering Applications And Services started
+[INFO] - 09/10/2023, 03:49:01,295 - BOOT :: Registering applications & services done
+[INFO] - 09/10/2023, 03:49:01,296 - BOOT :: Registering routes started
+[INFO] - 09/10/2023, 03:49:01,296 - BOOT :: Registered following routes
+[INFO] - 09/10/2023, 03:49:01,301 - 
+[90m┌────────┬──────────┐[39m
+[90m│[39m[31m Method [39m[90m│[39m[31m Endpoint [39m[90m│[39m
+[90m├────────┼──────────┤[39m
+[90m│[39m[31m GET    [39m[90m│[39m /api/v1/ [90m│[39m
+[90m└────────┴──────────┘[39m
+[INFO] - 09/10/2023, 03:49:01,303 - BOOT :: Registering routes done
+[INFO] - 09/10/2023, 03:49:01,304 - BOOT :: Registering initializer started
+[INFO] - 09/10/2023, 03:49:01,305 - BOOT :: Registered initializer : data
+[INFO] - 09/10/2023, 03:49:01,308 - BOOT :: Registering initializer done
+[INFO] - 09/10/2023, 03:49:01,309 - BOOT :: Booting application started
+[INFO] - 09/10/2023, 03:49:01,315 - BOOT :: Booting application done
+[INFO] - 09/10/2023, 03:49:01,389 - BOOT :: Listening on localhost:8080
