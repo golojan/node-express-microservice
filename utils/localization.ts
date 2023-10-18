@@ -14,7 +14,7 @@ const setLocale = function (lan: string): boolean {
                 break;
         }
         return true;
-    } catch (err) {
+    } catch (err: any) {
         logger.error(`Error in setting up locales : ${JSON.stringify(err.message)}`);
         return false;
     }

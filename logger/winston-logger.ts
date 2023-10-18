@@ -27,7 +27,7 @@ const setLogConfig =  (config, callback) => {
         // execute the callback if any
         if (typeof callback === "function") callback();
         return true;
-    } catch (e) {
+    } catch (e: any) {
         console.log("Error in configuring the logger " + JSON.stringify(e.message));
         return false;
     }

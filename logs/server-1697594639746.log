@@ -1,0 +1,24 @@
+[INFO] - 18/10/2023, 03:03:59,921 - MicroService :: MicroService is starting with environment :: dev
+[INFO] - 18/10/2023, 03:03:59,983 - MicroService :: Initialising express MicroService with tyboost
+[INFO] - 18/10/2023, 03:03:59,990 - MicroService :: Initiating MicroService
+[INFO] - 18/10/2023, 03:03:59,992 - BOOT :: Registering core middleware started
+[INFO] - 18/10/2023, 03:03:59,999 - BOOT :: Registered middleware : bodyParser
+[INFO] - 18/10/2023, 03:04:00,2 - BOOT :: Registered middleware : cors(*)
+[INFO] - 18/10/2023, 03:04:00,28 - BOOT :: Registered middleware : helmet
+[INFO] - 18/10/2023, 03:04:00,52 - BOOT :: Registering core middleware done
+[INFO] - 18/10/2023, 03:04:00,70 - BOOT :: Registering Prisma, ORM started
+[ERROR] - 18/10/2023, 03:04:00,90 - BOOT :: Error while registering applications & services. Check core middleware : "Cannot find module '@prisma/client'\nRequire stack:\n- E:\\mserv\\app\\boot.ts\n- E:\\mserv\\app\\index.ts\n- E:\\mserv\\server.ts"
+[INFO] - 18/10/2023, 03:04:00,101 - BOOT :: Registering applications & services done
+[INFO] - 18/10/2023, 03:04:00,117 - BOOT :: Registering routes started
+[INFO] - 18/10/2023, 03:04:00,132 - BOOT :: Registered following routes
+[INFO] - 18/10/2023, 03:04:00,152 - 
+[90m┌────────┬──────────┐[39m
+[90m│[39m[31m Method [39m[90m│[39m[31m Endpoint [39m[90m│[39m
+[90m├────────┼──────────┤[39m
+[90m│[39m[31m GET    [39m[90m│[39m /api/v1/ [90m│[39m
+[90m└────────┴──────────┘[39m
+[INFO] - 18/10/2023, 03:04:00,156 - BOOT :: Registering routes done
+[INFO] - 18/10/2023, 03:04:00,160 - BOOT :: Booting application started
+[INFO] - 18/10/2023, 03:04:00,184 - BOOT :: Booting Process Id (10056)
+[INFO] - 18/10/2023, 03:04:00,191 - BOOT :: Booting application done >>>
+[INFO] - 18/10/2023, 03:04:00,286 - BOOT :: Listening on localhost:8080

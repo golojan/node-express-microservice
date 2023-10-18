@@ -1,4 +1,4 @@
-import { Connections, logger, constants } from "../../utils";
+import { Connections, logger, constants, config } from "../../utils";
 
 /*
 * On successful initialization invoke resolve
@@ -14,7 +14,10 @@ const init = async function (): Promise<void> {
         Connections.set(constants.CONNECTIONS.DATA, () => {
             logger.info(`BOOT :: Connected to {data}`);
         });
-    }  catch (err) {
+        if(config.applications.prisma){
+            
+        }
+    }  catch (err: any) {
         logger.error(`BOOT :: Error connecting to {data} : ${JSON.stringify(err.message)}`);
         throw  new Error(err.message);
     }

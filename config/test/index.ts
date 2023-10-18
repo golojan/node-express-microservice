@@ -1,5 +1,11 @@
 export default {
-    applications : {},
+    applications: {
+        database: 'postgres',
+        prisma: {
+            enable: true,
+            url: process.env.DATABASE_URL,
+        }
+    },
     databases: {
         postgres: {
             enable: false,
@@ -8,6 +14,5 @@ export default {
             user_database: "",
             user_collection: ""
         }
-    },
-
+    }
 };

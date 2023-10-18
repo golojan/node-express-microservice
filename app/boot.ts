@@ -7,8 +7,7 @@ import * as listEndpoints from "express-list-endpoints";
 import * as Table from "cli-table";
 
 import allRouter from "../routes";
-
-import allInitializer from "./initializers";
+// import allInitializer from "./initializers";
 import { logger, constants, config } from "../utils";
 
 // initialise express app with tyboost - https://www.npmjs.com/package/tyboost
@@ -31,12 +30,12 @@ class MicroService {
             // register routes
             this.registerRoutes(allRouter ? allRouter : {});
             // register all the initializer
-            this.registerInitializers(allInitializer ? allInitializer : {});
+            // this.registerInitializers(allInitializer ? allInitializer : {});
             logger.info(`BOOT :: Booting application started`);
 
             // boot the application
             await app.boot();
-            logger.info(`BOOT :: Booting application done`);
+            logger.info(`BOOT :: Booting application done >>>`);
 
             app.listen(constants.PORT, constants.HOST).on("error", (error: any) => {
                 if (error.syscall !== "listen") {
@@ -55,14 +54,13 @@ class MicroService {
                     default:
                         throw error;
                 }
-            })
-                .on("listening", () => {
-                    logger.info(`BOOT :: Listening on ${constants.HOST}:${constants.PORT}`);
-                });
+            }).on("listening", () => {
+                logger.info(`BOOT :: Listening on ${constants.HOST}:${constants.PORT}`);
+            });
 
             // exit on uncaught exception
             this.handleError();
-        } catch (err) {
+        } catch (err: any) {
             logger.error(`BOOT :: Error while booting application from boot script : ${JSON.stringify(err)}`);
             throw err;
         }
@@ -86,7 +84,7 @@ class MicroService {
             }));
             logger.info(`BOOT :: Registered middleware : helmet`);
 
-        } catch (err) {
+        } catch (err: any) {
             logger.error(`BOOT :: Error while registering core middleware . Check core middleware : ${JSON.stringify(err.message)}`);
         } finally {
             logger.info(`BOOT :: Registering core middleware done`);
@@ -98,9 +96,22 @@ class MicroService {
         try {
             // Setup Applications
             if (config.applications) {
+                const usingPrisma = config.applications.prisma.enable;
+                if (usingPrisma) {
+                    logger.info(`BOOT :: Registering Prisma, ORM started`);
+                    const prisma = require("@prisma/client");
+                    const prismaClient = new prisma.PrismaClient();
+                    app.use((req, res, next) => {
+                        req["prisma"] = prismaClient;
+                        next();
+                    });
+                    logger.info(`BOOT :: Registered Prisma`);
+                }
                 logger.info(`BOOT :: Registering Applications And Services started`);
+            }else{
+
             }
-        } catch (err) {
+        } catch (err: any) {
             logger.error(`BOOT :: Error while registering applications & services. Check core middleware : ${JSON.stringify(err.message)}`);
         } finally {
             logger.info(`BOOT :: Registering applications & services done`);
@@ -128,24 +139,24 @@ class MicroService {
                 logger.info(`\n${table.toString()}`);
                 logger.info("BOOT :: Registering routes done");
             }
-        } catch (err) {
+        } catch (err: any) {
             logger.error(`BOOT :: Error while registering routes. Check routes : ${JSON.stringify(err.message)}`);
         }
     };
 
     // register all initializer in initializers/index
-    private registerInitializers = (initializers: object): void => {
-        try {
-            logger.info(`BOOT :: Registering initializer started`);
-            Object.keys(initializers).forEach(key => {
-                app.register(allInitializer[key]);
-                logger.info(`BOOT :: Registered initializer : ${key}`);
-            });
-            logger.info(`BOOT :: Registering initializer done`);
-        } catch (err) {
-            logger.error(`BOOT :: Error while registering initializer. Check initializer : ${JSON.stringify(err.message)}`);
-        }
-    };
+    // private registerInitializers = (initializers: object): void => {
+    //     try {
+    //         logger.info(`BOOT :: Registering initializer started`);
+    //         Object.keys(initializers).forEach(key => {
+    //             app.register(allInitializer[key]);
+    //             logger.info(`BOOT :: Registered initializer : ${key}`);
+    //         });
+    //         logger.info(`BOOT :: Registering initializer done`);
+    //     } catch (err: any) {
+    //         logger.error(`BOOT :: Error while registering initializer. Check initializer : ${JSON.stringify(err.message)}`);
+    //     }
+    // };
 
     private handleError = (): void => {
         process.on("uncaughtException", function (err) {

@@ -3,7 +3,7 @@
 		"target": "es6",
 		"module": "commonjs",
 		"sourceMap": false,
-		"outDir": "build",
+		"outDir": "dist",
 		"noImplicitAny": false,
 		"noUnusedParameters": false,
 		"noUnusedLocals": true,
@@ -12,7 +12,7 @@
 		"lib": [
 			"es6"
 		],
-		"strict": false,
-		"baseUrl": "./src"
+		"strict": true,
+		"baseUrl": "./"
 	}
 }
