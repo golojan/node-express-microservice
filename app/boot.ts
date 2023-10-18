@@ -1,5 +1,6 @@
 import * as express from "express";
-import * as tyboost from "tyboost";
+// import * as tyboost from "tyboost";
+const tyboost = require("tyboost");
 import * as cors from "cors";
 import helmet from "helmet";
 
